@@ -1,0 +1,24 @@
+# Large binaries and downloaded content (never commit)
+*.iso
+*.wim
+*.esd
+*.msu
+*.cab
+*.part
+*.exe
+
+# Working folders and run output
+MOUNT/
+Logs/
+Images/
+MDATP/
+*.log
+Packages.txt
+publishnotes.txt
+
+# Editor / OS files
+.vscode/
+.vs/
+Thumbs.db
+Desktop.ini
+.DS_Store
