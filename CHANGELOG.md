@@ -3,6 +3,13 @@
 All notable changes to this project are documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/), and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [1.1.0]
+
+### Added
+
+- `New-BootableIso.ps1` 1.0.0: builds a bootable (BIOS + UEFI, UDF 1.02) ISO from the original Microsoft ISO and the finished WIM using `oscdimg.exe` (Windows ADK Deployment Tools), keeps the original volume label, supports `-NoPrompt`, and verifies the new ISO. The ISO is written to the images folder, never to `WIMOST\ISO`.
+- `New-BootableIso.ps1` `-DisableLangPackCleanup`: adds `sources\$OEM$\$$\Setup\Scripts\SetupComplete.cmd`, which disables the language pack cleanup tasks and sets `BlockCleanupOfUnusedPreinstalledLangPacks`, so preinstalled languages survive a Setup-based installation.
+
 ## [1.0.0]
 
 Initial public release.
